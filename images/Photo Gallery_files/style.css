@@ -1,0 +1,440 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Pacifico&display=swap');
+body{
+    padding:0;
+    margin:0;  
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal
+}
+/*Background Image in body*/
+body::after {
+    content: "";
+    background: url(./images/logo2.jpg);
+    background-size: cover;
+    background-position: right 40cap bottom 70%;
+    opacity: 0.2;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+  }
+  /*header*/
+header{
+   display:flex;
+   height:90px;
+   width:100vw;
+   justify-content: space-between;
+   background-color: rgb(241, 197, 161);  
+
+}
+header img{
+    width:80px;
+    height:80px;
+    border-radius: 50%;
+    margin-left: 80px; 
+    border:2px solid rgb(136, 86, 94);
+    margin-top: 3px;
+}
+h1{
+    color: white;
+    text-shadow:4px 4px 2px rgba(136, 86, 94, 1);
+    font-size: 50px;  
+    font-style: italic;
+    align-self: center;
+    animation: text-blur-out 3s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    animation-iteration-count: infinite;
+}
+@keyframes text-blur-out {
+    0% {
+      filter: blur(0.01);
+    }
+    100% {
+      filter: blur(12px) opacity(0%);
+    }
+  }
+  
+  
+  
+.icon-1{
+   margin-right: 20px;
+   font-size: 25px;
+   color: rgb(136, 86, 94);
+   padding-top: 28px;
+   color: #FFFFFF;
+   transition: transform 0.1s ease;
+
+   text-shadow: 2px 2px 0 #88565e, 2px -2px 0 #88565e, -2px 2px 0 #88565e, -2px -2px 0 #88565e, 2px 0px 0 #88565e, 0px 2px 0 #88565e, -2px 0px 0 #88565e, 0px -2px 0 #88565e;
+}
+.fa-tiktok{
+    padding-right: 80px;
+}
+.icon-1:hover{
+    cursor: pointer;
+    animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.3);
+  }
+}
+/*Alles über MEns Div*/
+.men{
+    display: flex;
+    margin-top: 50px;
+    gap:300px
+
+}
+.info{
+    margin-top: 20px;
+    margin-left: 400px;
+    width:400px;
+}
+h2{
+    font-size: 45px;
+    font-style: italic;
+    text-shadow:4px 4px 2px rgba(136, 86, 94, 0.5);
+}
+.bold-text{
+    font-size: 30px;
+    font-weight: bold;
+}
+.info li{
+    line-height: 30px;
+}
+ p, ul{
+    font-size: 20px;
+}
+.grid-div{
+    height: 760px;
+    width: 580px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap:8px;
+    padding:20px;
+}
+.grid-div div{
+    background-color: rgb(241, 197, 161);
+    padding:10px;
+    
+}
+.box{
+    background-color: #000;
+    color: #fff;
+    overflow: hidden;
+    position: relative;
+    /*text-align: center;*/
+  }
+/*.box * {
+    box-sizing: border-box;
+    transition: all 0.45s ease;
+ }*/
+  .box::before,
+  .box::after {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-top: 32px solid rgba(0, 0, 0, 0.5);
+    border-bottom: 32px solid rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: '';
+    transition: all 0.3s ease;
+    z-index: 1;
+    opacity: 0;
+    transform: scaleY(2);
+  }
+  /*.box img {
+    vertical-align: top;
+    backface-visibility: hidden;
+  }*/
+  
+  .box figcaption {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    align-items: center;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.1em;
+    opacity: 0;
+    /*z-index: 2;*/
+    transition-delay: 0.1s;
+    font-size: 24px;
+    font-family: sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  
+  .box:hover::before,
+  .box:hover::after {
+    transform: scale(1);
+    opacity: 1;
+  }
+  
+  .box:hover > img {
+    opacity: 0.7;
+  }
+  
+  .box:hover figcaption {
+    opacity: 1;
+  }
+
+
+.grid-div img{
+    object-fit:cover;
+    align-self: center;
+}
+  
+.div-1{
+   grid-column: 1;
+   grid-row: 1 / span 2; 
+   border-radius: 20px;
+}
+.div-1 img{
+   width:120px;
+   height:230px;
+}
+.div-2{
+    grid-column:2;
+    grid-row:1;
+    border-top-left-radius: 15px;
+}
+.div-2 img{
+    width:120px;
+    height:100px;
+}
+.div-3{
+    grid-column:3;
+    grid-row:1;
+    border-top-right-radius: 15px;
+}
+.div-3 img{
+    width:120px;
+    height:100px;
+}
+.div-4{
+    grid-column:4;
+    grid-row: 1 / span 2;
+    border-radius: 20px;
+}
+.div-4 img{
+    width:120px;
+    height:230px;
+}
+.div-5{
+    grid-column:2 / span 2;
+    grid-row:2;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.div-5 img{
+    width:265px;
+    height:100px;
+}
+.div-6{
+    grid-column:1;
+    grid-row:3;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.div-6 img{
+    width:120px;
+    height:100px;
+}
+.div-7{
+    grid-column: 2 / span 2;
+    grid-row: 3 / span 2;
+    border-radius: 20px;
+}
+.div-7 img{
+    height:230px;
+    width:250px;
+    padding-left: 10px;
+}
+.div-8{
+    grid-column:4;
+    grid-row:3;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+.div-8 img{
+    width:120px;
+    height:100px;
+
+}
+.div-9{
+    grid-column:1;
+    grid-row:4;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.div-9 img{
+    width:120px;
+    height:100px;
+}
+.div-10{
+    grid-column:4;
+    grid-row:4;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.div-10 img{ 
+    width:120px;
+    height:100px;
+}
+.div-11{
+    grid-column:4;
+    grid-row:5 / span 2;
+    border-radius: 20px;
+}
+.div-11 img{
+    width:120px;
+    height:230px;
+    border-radius: 20px;
+}
+.div-12{
+    grid-column:1;
+    grid-row: 5 / span 2;
+    border-radius: 20px;
+}
+.div-12 img{
+    width:120px;
+    height:230px;
+}
+.div-13{
+    grid-column:2 /span 2 ;
+    grid-row:5;
+    border-top-right-radius:15px;
+    border-top-left-radius:15px;
+}
+.div-13 img{
+    width:265px;
+    height:100px;
+  
+}
+.div-14{
+    grid-column:2;
+    grid-row:6;
+    border-bottom-left-radius:15px;
+}
+.div-14 img{
+    width:120px;
+    height:100px;
+}
+.div-15{
+    grid-column:3;
+    grid-row:6;
+    border-bottom-right-radius:15px;
+}
+.div-15 img{
+    width:120px;
+    height:100px;
+}
+/* alles über frauen Div */
+/*.frau img{
+    width: 400px;
+    aspect-ratio: 2 / 1.5;
+    object-fit: cover;
+    background-position: bottom 40px;
+    position: absolute;
+}*/
+.frau{
+    width:100%;
+    margin-top: 10rem;
+    text-align: center;
+  
+}
+
+.text-2{
+    width: 400px;
+    margin-left: 260px;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.gallery-2{
+    width:600px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 200px;
+    gap: 10px;
+
+}
+.text-bild{
+    margin-top: 100px;
+    display: flex;
+}
+.item{
+    width:160px;
+    height: 170px;
+    animation: heartbeat 5s ease-in-out infinite both;
+}
+@keyframes heartbeat {
+    from {
+      transform: scale(1);
+      transform-origin: center center;
+      animation-timing-function: ease-out;
+    }
+    10% {
+      transform: scale(0.91);
+      animation-timing-function: ease-in;
+    }
+    17% {
+      transform: scale(0.98);
+      animation-timing-function: ease-out;
+    }
+    33% {
+      transform: scale(0.87);
+      animation-timing-function: ease-in;
+    }
+    45% {
+      transform: scale(1);
+      animation-timing-function: ease-out;
+    }
+  }
+.item:hover{
+    animation: rotate-in-center 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+  @keyframes rotate-in-center {
+    0% {
+      transform: rotate(-360deg);
+      opacity: 0;
+    }
+    100% {
+      transform: rotate(0);
+      opacity: 1;
+    }
+  }
+.item img{
+    height: 150px;
+    aspect-ratio: 2 / 2;
+    border-radius: 28px;
+background: linear-gradient(225deg, #d9b191, #ffd3ac);
+box-shadow:  -0px 10px 0px #e3b997,
+             0px -10px 0px #ffd1ab;
+
+}
+footer{
+    margin-top: 100px;
+    height: 100px;
+    background-color: rgb(241, 197, 161);
+}
+footer p{
+    font-family:Arial, Helvetica, sans-serif;
+    padding: 40px 0 0 100px;
+}
+
